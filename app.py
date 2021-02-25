@@ -44,8 +44,8 @@ def index():
     return render_template('home.html', form=form)
 
 # load model and scaler
-iris_model = load_model('../../Models/final_iris_model.h5')
-iris_scaler = joblib.load('../../Models/iris_scaler.pkl')
+iris_model = load_model('Models/final_iris_model.h5')
+iris_scaler = joblib.load('Models/iris_scaler.pkl')
 
 
 @app.route('/prediction')
