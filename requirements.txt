@@ -33,7 +33,7 @@ rsa==4.7.2
 scikit-learn==0.23.2
 scipy==1.4.1
 six==1.15.0
-tensorflow==2.4.1
+tensorflow==2.4.0
 termcolor==1.1.0
 threadpoolctl==2.1.0
 typing-extensions==3.7.4.3
