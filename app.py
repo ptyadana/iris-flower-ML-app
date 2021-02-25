@@ -4,6 +4,7 @@ from tensorflow.keras.models import load_model
 import joblib
 
 from FlowerForm import FlowerForm
+import os
 
 #---------  prediction function --------------
 def return_prediction(model, scaler, sample_json):
@@ -67,4 +68,9 @@ def prediction():
 
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+    
+    # port change resource
+    # https://virantha.com/2013/11/14/starting-a-simple-flask-app-with-heroku/
+    
