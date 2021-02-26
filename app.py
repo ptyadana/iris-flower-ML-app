@@ -35,13 +35,15 @@ def index():
     form = FlowerForm()
     
     if form.validate_on_submit():
-        # put those data in current session
-        session['sepal_length'] = form.sepal_length.data
-        session['sepal_width'] = form.sepal_width.data
-        session['petal_length'] = form.petal_length.data
-        session['petal_width'] = form.petal_width.data
         
-        return redirect(url_for('prediction'))
+        if form.sepal_length.data and form.sepal_width.data and form.petal_length.data and form.petal_width.data:
+            # put those data in current session
+            session['sepal_length'] = form.sepal_length.data
+            session['sepal_width'] = form.sepal_width.data
+            session['petal_length'] = form.petal_length.data
+            session['petal_width'] = form.petal_width.data
+            
+            return redirect(url_for('prediction'))
     
     return render_template('home.html', form=form)
 
@@ -55,8 +57,6 @@ def prediction():
     content = {}
     
     # get data from session object
-    print('Reaching to preidction function...')
-    print(session['sepal_length'])
     content['sepal_length'] = float(session['sepal_length'])
     content['sepal_width'] = float(session['sepal_width'])
     content['petal_length'] = float(session['petal_length'])
