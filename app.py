@@ -67,7 +67,7 @@ def prediction():
     return render_template('prediction.html', results=results)
 
 
-@app.route('/api/flower', methods=['POST'])
+@app.route('/api/iris', methods=['POST'])
 def predict_flower():
     print(request.json)
     content = request.json
