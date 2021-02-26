@@ -6,6 +6,7 @@ ML app for predicting Iris flower species based on given features.
 + [Scikit-learn](https://scikit-learn.org/stable/) - Simple and efficient tools for predictive data analysis
 + [TensorFlow](https://www.tensorflow.org/) - An end-to-end open source machine learning platform
 + [Keras](https://keras.io/) - Deep Learning framework
++ [Flask](https://flask.palletsprojects.com/en/1.1.x/) - a micro web framework written in Python
 
 ## Iris Flower App
 Let's try out on [heroku](https://iris-flower-app-by-ptyadana.herokuapp.com/).
