@@ -11,7 +11,7 @@ ML app for predicting Iris flower species based on given features.
 Let's try out on [heroku](https://iris-flower-app-by-ptyadana.herokuapp.com/).
 
 ## Iris Flower REST API Endpoint
-```/api/flower``` POST: get the flower prediction
+```/api/iris``` POST: get the flower prediction
 
 #### Sample JSON
 ```javascript
