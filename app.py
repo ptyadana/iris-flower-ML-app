@@ -1,4 +1,5 @@
 from flask import Flask, render_template, session, redirect, url_for
+from flask import request, jsonify
 import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
@@ -66,6 +67,12 @@ def prediction():
     return render_template('prediction.html', results=results)
 
 
+@app.route('/api/flower', methods=['POST'])
+def predict_flower():
+    print(request.json)
+    content = request.json
+    results = return_prediction(iris_model, iris_scaler, content)
+    return jsonify(results)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
