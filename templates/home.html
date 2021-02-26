@@ -1,15 +1,64 @@
-<h1>FLASK APP RUNNING</h1>
-<h2>Please enter your flower measurements below:</h2>
-<form  method="POST">
-    {# This hidden_tag is a CSRF security feature. #}
-    {{ form.hidden_tag() }}
-    {{ form.sepal_length.label }} {{form.sepal_length}}
-    <br>
-    {{ form.sepal_width.label}} {{form.sepal_width}}
-    <br>
-    {{form.petal_length.label}}{{form.petal_length}}
-    <br>
-    {{form.petal_width.label}}{{form.petal_width}}
-    <br>
-    {{ form.submit() }}
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Iris Flower ML App by ptyadana</title>
+</head>
+
+<body>
+        <div style="background-image: url('https://static.vecteezy.com/system/resources/previews/000/146/683/large_2x/vector-iris-flower-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0 auto;
+        ">
+            <div style="height:35px"></div>
+            <div class="jumbotron maincontainer" style="background: rgba(204, 204, 204, 0.5); padding-top: 30px; height: 100vh;">
+            <h1 class="display-4">Welcome to Iris Flower Prediction ML App</h1>
+            <p class="lead">Simple, yet useful app which allows to analyze Iris flower species!</p>
+            <hr class="my-4">
+            <h4 class="display-6">Please enter your flower measurements below</h4>
+            <p class="lead">
+                <form  method="POST">
+                {# This hidden_tag is a CSRF security feature. #}
+                {{ form.hidden_tag() }}
+                <div class="row">
+                    <div class="col-12">
+                        {{ form.sepal_length.label }} : {{form.sepal_length}}
+                    </div>
+                    <div class="col-12">
+                        {{ form.sepal_width.label}} : {{form.sepal_width}}
+                    </div>
+                    <div class="col-12">
+                        {{form.petal_length.label}}  : {{form.petal_length}}
+                    </div>
+                    <div class="col-12">
+                            {{form.petal_width.label}} : {{form.petal_width}}
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Analyze</button>
+                    </div>
+                </div>      
+                </form>
+            </p>
+            </div>
+            <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+                <div class="container text-center">
+                    <small>built with <span style="color: #e25555;">&#9829;</span> by Phone Thiri Yadana</small>
+                </div>
+            </footer>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
